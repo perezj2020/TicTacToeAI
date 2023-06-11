@@ -53,7 +53,17 @@ class NPC(player):
                 if sim_score['score'] < best['score']:
                     best = sim_score
         return best
+    
+    #RANDOM NPC FOR TESTING
+'''
+class RNPC(player):
+    def __init__(self, letter):
+        super().__init__(letter)
 
+    def getmove(self, game):
+        square = random.choice(game.availablemoves())
+        return square
+        '''
 class HumanPlayer(player):
     def _init_ (self,letter):
         super().__init__(letter)
