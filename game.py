@@ -97,7 +97,7 @@ if __name__ =='__main__':
     oplayer= NPC('O')
     t= tictactoe()
     endgame=False
-
+    
     while endgame==False:
         play(t,xplayer,oplayer,printgame=True)
         again=input('Play again? Y OR N')
@@ -109,6 +109,26 @@ if __name__ =='__main__':
             endgame=False
         else:
             print('Invalid input, restarting game')
+            
+                #Comment out the while loop to test AI vs Random NPC with this code
+   ''' 
+   if __name__ =='__main__':
+    xwins=0
+    owins=0
+    ties=0
+    for _ in range(100):
+        xplayer= RNPC('X')
+        oplayer= NPC('O')
+        t= tictactoe()
+        result= play(t,xplayer,oplayer,printgame=False)
+        if result=='X':
+            xwins+=1
+        elif result=='O':
+            owins+=1
+        else:
+            ties+=1
+    print(f'X wins= {xwins}, O wins: {owins}, Ties: {ties}')
+    '''
 
 
 
